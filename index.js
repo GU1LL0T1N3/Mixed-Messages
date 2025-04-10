@@ -1,24 +1,25 @@
 // Returns var with three random colors/numbers 
 function randomColors() {
     let colors = ["1W", "2U", "3B", "4R", "5G"];
-    let pairings = [];
-    for (let i = 0; pairings.length < 3; i++) {
+    let groups = [];
+    // Loop for adding random colors to groups until the length is 3
+    for (let i = 0; groups.length < 3; i++) {
         let grabColor = colors[Math.floor(Math.random() * 5)];
-        if (pairings.includes(grabColor) === false) {
-            pairings.push(grabColor);
+        if (groups.includes(grabColor) === false) {
+            groups.push(grabColor);
         }
     }
-
-    pairings = pairings.sort();
-    pairings = pairings.join("");
-    return pairings;
+    // Sorts the colors with the associated numbers for easy reading
+    groups = groups.sort();
+    groups = groups.join("");
+    return groups;
 }
 
-let setPair = randomColors();
-
+let setGroup = randomColors();
+// Var for storing the randomly selected color combo's properties
 let clanNameAndColors = [];
-
-switch  (setPair)   {
+// Determines what section, clan, and color names are associated with each color groups
+switch  (setGroup)   {
     case "1W2U3B": 
         clanNameAndColors.push("Esper", "Shard", "White, Blue, and Black");
         break;
@@ -52,26 +53,11 @@ switch  (setPair)   {
     default:
         console.log("There is not enough colors!")
 }
-console.log(clanNameAndColors)
 
+// Function that logs the final messages with the outputs from the switch
 function clanAndColors()    {
     console.log(`Your ${clanNameAndColors[1]} name is ${clanNameAndColors[0]}!`);
-    console.log(`Your ${clanNameAndColors[1]}'s colors are ${clanNameAndColors[2]}`)
+    console.log(`Your ${clanNameAndColors[1]}'s colors are ${clanNameAndColors[2]}`);
 }
 
 clanAndColors();
-
-
-
-    /*
-for (let i = 0; i < 3; i++) {
-    numberedPairings.push(parseInt(pairings[i]));
-    console.log(numberedPairings);
-}*/
-
-
-/*
-switch  (numberedPairings)  {
-    case "":
-}*/
-    
