@@ -47,7 +47,7 @@ switch  (setGroup)   {
     case "1W3B4R":
         clanNameAndColors.push("Mardu", "Wedge", "Red, White, and Black");
         break;
-    case "2B4R5G":
+    case "2U4R5G":
         clanNameAndColors.push("Temur", "Wedge", "Green, Blue, and Red");
         break;
     default:
